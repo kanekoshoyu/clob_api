@@ -1,33 +1,29 @@
+<!-- HTML for static distribution bundle build -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Swagger UI</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui-bundle.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui-standalone-preset.js"> </script>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./dist/swagger-ui.css" />
+  <link rel="stylesheet" type="text/css" href="./dist/index.css" />
+  <link rel="icon" type="image/png" href="./dist/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./dist/favicon-16x16.png" sizes="16x16" />
 </head>
 
 <body>
-    <div id="swagger-ui"></div>
-    <script>
-        window.onload = function () {
-            // begin Swagger UI call region
-            const ui = SwaggerUIBundle({
-                // replace this with the path to your OpenAPI spec
-                url: "./binance_spot_openapi.yml",
-                dom_id: '#swagger-ui',
-                presets: [
-                    SwaggerUIBundle.presets.apis,
-                    SwaggerUIStandalonePreset
-                ],
-                layout: "StandaloneLayout"
-            })
-            // end Swagger UI call region
-        }
-    </script>
+  <div id="swagger-ui"></div>
+  <script src="./dist/swagger-ui-bundle.js" charset="UTF-8"> </script>
+  <script src="./dist/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+  <script src="./dist/swagger-initializer.js" charset="UTF-8"> </script>
+  <script>
+      window.onload = () => {
+        window.ui = SwaggerUIBundle({
+          url: 'https://binance.github.io/binance-api-swagger/spot_api.yaml',
+          dom_id: '#swagger-ui',
+      });
+        };
+      </script>
 </body>
 
 </html>

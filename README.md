@@ -1,4 +1,6 @@
-# henlo: machine readable crypto exchange API doc in AsyncAPI YAML
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# henlo: machine readable crypto exchange API in OpenAPI/AsyncAPI YAML
 
 there are way too many crypto exchanges and programming languages. we should try standardise the way we implement the exchange library.
 
